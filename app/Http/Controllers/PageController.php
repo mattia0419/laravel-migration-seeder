@@ -9,7 +9,7 @@ class PageController extends Controller
   public function index()
   {
     $title = "Homepage";
-    $trains = train::all();
+    $trains = Train::where('data', '=', '2023-10-16')->get();
     return view('home', compact('title','trains'));
   }
 }
